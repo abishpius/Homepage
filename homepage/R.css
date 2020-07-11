@@ -1,0 +1,32 @@
+#myHeader{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    font-family: Serif ;
+    font-weight: bold;
+
+}
+body {
+    background-color: lavenderblush;
+}
+
+#title{
+    text-align: center;
+    color: black;
+
+    font-family: sans-serif ;
+    font-weight: bold;
+}
+
+#code{
+    text-align: center;
+    color: black;
+
+    font-family: sans-serif ;
+}
+
+#c{
+    background-color: lightsteelblue;
+    color: blue;
+    text-align: center;
+}

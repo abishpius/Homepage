@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="R.css" rel="stylesheet">
+        <title>R Tutorial From Scratch</title>
+    </head>
+
+
+ <body>
+     <h1 id="myHeader">Learn R From Scratch</h1></h1>
+
+
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary" onclick = "InstallRFunction()">Installing R</button>
+  <button type="button" class="btn btn-secondary" onclick = "RBasicsFunction()">R-Basics</button>
+
+</div>
+
+<br>
+<hr>
+<p  align="center"><iframe id="1" src="R_install.html" height="500" width="700" style="border:2px solid royalblue;"></iframe></p>
+
+
+<script>
+function InstallRFunction() {
+    document.getElementById("1").src = "R_install.html";
+    document.getElementById("1").style = "border: 2px solid royalblue";
+
+}
+function RBasicsFunction(){
+    document.getElementById("1").src = "R_Basics.html";
+    document.getElementById("1").style = "border: 2px solid gray";
+}
+</script>
+
+<p> <a href="index.html" class="btn btn-info btn-lg btn-block" add target="_blank" role="button" aria-pressed="true">Return to Homepage!</a>
+
+</p>
+
+ </body>
+
+</html>

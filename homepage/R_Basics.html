@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="R.css" rel="stylesheet">
+ </head>
+
+  <body>
+<p>
+   <h3 id="title">R Basics: Functions and Data Types</h3>
+<h4>Objects</h4>
+<ul>
+    <li>To define a variable, we may use the assignment symbol, <-.</li>
+    <li>There are two ways to see the value stored in a variable: (1) type the variable name into the console and hit Return, or (2) use the print() function by typing <strong>print(variable_name)</strong> and hitting Return.</li>
+    <li>Objects are things that are stored in named containers in R. They can be variables, functions, etc. The <strong>ls()</strong> function shows the names of the objects saved in your workspace.</li>
+</ul>
+<h5 id = "code">Code: Quadratic Equation</h5>
+
+<pre id="c"><code>
+# assigning values to variables
+a <-1
+b <-1
+c <-1
+
+# solving the quadratic equation
+(-b + sqrt(b^2 - 4*a*c))/(2*a)
+(-b - sqrt(b^2 - 4*a*c))/(2*a)
+</code></pre>
+
+<h4>Functions</h4>
+<ul>
+    <li>In general, to evaluate a function we need to use parentheses. If we type a function without parenthesis, R shows us the code for the function. Most functions also require an argument, that is, something to be written inside the parenthesis.</li>
+    <li>To access help files, we may use the help function, <strong>help(function_name)</strong>, or write the question mark followed by the function name, <strong>?function_name</strong>.</li>
+    <li>The help file shows you the arguments the function is expecting, some of which are required and some are optional. If an argument is optional, a default value is assigned with the equal sign. The <strong>args()</strong> function also shows the arguments a function needs.</li>
+    <li>To specify arguments, we use the equals sign. If no argument name is used, R assumes you’re entering arguments in the order shown in the help file.</li>
+    <li>Creating and saving a script makes code much easier to execute.</li>
+    <li>To make your code more readable, use intuitive variable names and include comments (using the “#” symbol) to remind yourself why you wrote a particular line of code.</li>
+</ul>
+
+<h5 id = "code">Code: Pre-Built Function</h5>
+
+<pre id="c"><code>
+mean(c(4,5,6)) #Mean Function takes the average of numbers in the vector.
+</code></pre>
+
+<h4>Data Types</h4>
+<ul>
+    <li>The function <strong>class()</strong> helps us determine the type of an object.</li>
+    <li>Data frames can be thought of as tables with rows representing observations and columns representing different variables.</li>
+    <li>To access data from columns of a data frame, we use the dollar sign symbol, $, which is called the accessor.</li>
+    <li>A vector is an object consisting of several entries and can be a numeric vector, a character vector, or a logical vector.</li>
+    <li>Quotes distinguish between variable names and character strings.</li>
+    <li>Factors are useful for storing categorical data, and are more memory efficient than storing characters.</li>
+</ul>
+
+<h5 id = "code">Code: Data Types Examples</h5>
+
+<pre id="c"><code>
+# loading the dslabs package and the murders dataset
+library(dslabs)
+data(murders)
+
+# determining that the murders dataset is of the "data frame" class
+class(murders)
+# finding out more about the structure of the object
+str(murders)
+# showing the first 6 lines of the dataset
+head(murders)
+
+# using the accessor operator to obtain the population column
+murders$population
+# displaying the variable names in the murders dataset
+names(murders)
+# determining how many entries are in a vector
+pop <- murders$population
+length(pop)
+# vectors can be of class numeric and character
+class(pop)
+class(murders$state)
+
+# logical vectors are either TRUE or FALSE
+z <- 3 == 2
+z
+class(z)
+
+# factors are another type of class
+class(murders$region)
+# obtaining the levels of a factor
+levels(murders$region)
+</code></pre>
+
+<br>
+<br>
+
+
+<footer class="blockquote-footer">Credit for all information goes to Harvard University. For more in depth details refer to the textbook here: <a href="https://rafalab.github.io/dsbook/r-basics.html#case-study-us-gun-murders">https://rafalab.github.io/dsbook/r-basics.html#case-study-us-gun-murders</a> <cite title="Source Title">Source Title</cite></footer>
+
+</p>
+
+
+
+</body>
+</html>

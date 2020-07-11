@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="R.css" rel="stylesheet">
+ </head>
+
+  <body>
+<p>
+   <h3 id="title">Getting Started in R: Installation</h3>
+<br>
+To use R code, you need to install the following:
+<ol>
+  <li>Base R Program from here: <a href= "https://cran.r-project.org/">https://cran.r-project.org/</a> (It's Free!)</li>
+  <li>Makes R more user friendly to run: <a href="https://rstudio.com/products/rstudio/download/">https://rstudio.com/products/rstudio/download/</a> (Also Free!)</li>
+</ol>
+<br>
+
+<h3 id="title">Getting Started in R: Installing Packages</h3>
+<h4>Key Points</h4>
+<ul>
+  <li>R was developed by statisticians and data analysts as an interactive environment for data analysis.</li>
+  <li>Some of the advantages of R are that (1) it is free and open source, (2) it has the capability to save scripts, (3) there are numerous resources for learning, and (4) it is easy for developers to share software implementation.</li>
+  <li>Expressions are evaluated in the R console when you type the expression into the console and hit Return.</li>
+  <li>A great advantage of R over point and click analysis software is that you can save your work as scripts. “Base R” is what you get after you first install R. Additional components are available via packages.</li>
+</ul>
+<h5 id = "code">Code: Install Packages Example</h5>
+
+<pre id="c"><code>
+#installing the dslabs package
+install.packages("dslabs")
+#loading the dslabs package into the R session
+library(dslabs)
+</code></pre>
+<br>
+<h4>Advanced</h4>
+<ul>
+  <li>The base version of R is quite minimal, but you can supplement its functions by installing additional packages.</li>
+  <li>We will be using tidyverse and dslabs packages for this course.</li>
+  <li>Install packages from R console: <strong>install.packages("pkg_name")</strong></li>
+  <li>Install packages from RStudio interface: Tools > Install Packages (allows autocomplete)</li>
+  <li>Once installed, we can use library(pkg_name) to load a package each time we want to use it</li>
+  <li>If you try to load a package with <em>library(blahblah)</em> and get a message like <em>Error in library(blahblah) : there is no package called 'blahblah'</em>, it means you need to install that package first with install.packages().</li>
+  <li>You can add the option dependencies = TRUE, which tells R to install the other things that are necessary for the package or packages to run smoothly. Otherwise, you may need to install additional packages to unlock the full functionality of a package.</li>
+</ul>
+<h5 id = "code">Code: More Installing Packages & Looking at Installed Packages</h5>
+
+<pre id="c"><code>
+install.packages("dslabs")  # to install a single package
+install.packages(c("tidyverse", "dslabs")） # to install two packages at the same time
+installed.packages() # to see the list of all installed packages
+</code></pre>
+
+<h3 id="title">RStudio: How to Use</h3>
+<a href= https://education.rstudio.com/learn/beginner/>https://education.rstudio.com/learn/beginner/</a>
+<br>
+<a href=https://rstudio.com/resources/cheatsheets/> https://rstudio.com/resources/cheatsheets/</a>
+<br>
+In general Rstudio helps you out within its GUI by using <strong>?#anything</strong>.
+<br>
+<br>
+
+
+<footer class="blockquote-footer">Credit for all information goes to Harvard University. For more in depth details refer to the textbook here: <a href="https://rafalab.github.io/dsbook/r-basics.html#case-study-us-gun-murders">https://rafalab.github.io/dsbook/r-basics.html#case-study-us-gun-murders</a> <cite title="Source Title">Source Title</cite></footer>
+</p>
+
+      </body>
+
+</html>
